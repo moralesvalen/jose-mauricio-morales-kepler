@@ -4,60 +4,101 @@
     <title>Jose Mauricio Morales's Portfolio</title>
     <meta name="author" content="Jose Mauricio Morales" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
+  <!--CABECERA DE LA PAGINA-->
+  <header>
+    <div class="logotipo">
+      <!--Logo -->
+      <img src="images/logo7.png" alt="mauricio morales logo" title="logo"/>
+      <h1>Mauricio Morales</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
+  <div class="barra">
+    <span class="esquina-izquierda"></span>
+    <span class="relleno-barra"></span>
+    <span class="esquina-derecha"></span>
+  </div>
+
   <body>
-    <h1>Jose Mauricio Morales Valencia</h1>
+    <div id="content">
+      <div class="box">
+        <h1>Jose Mauricio Morales Valencia</h1>
 
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#connect">Connect</a></li>
-      </ul>
-    </nav>
+        <section class="about" id="about">
+          <img
+            class="foto"
+            src="images/mauricio-morales.JPEG"
+            alt="mauricio morales" title="mauricio morales"
+          />
+          <h2>About</h2>
+          <p>
+            I’m a technology enthusiast with a strong desire to learn and grow
+            in the USA. I’m new here, but I’m full of hope and dreams!
+          </p>
+          <p>
+            <h2>Fun Facts</h2>
+            <ul>
+              <li>I love coding at night 🌙</li>
+              <li>Music keeps me focused when coding 🎧 </li>
+              <li>I’m a big soccer fan (Real Madrid all the way!) ⚽ </li>     
+              <li>I love playing video games in my free time 🎮 </li>      
+              <li>I speak Spanish </li>
+            </ul>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I’m a technology enthusiast with a strong desire to learn and grow in
-        the USA. I’m new here, but I’m full of hope and dreams!
-      </p>
-    </section>
+          </p>
+   
+        </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li>PowerBuilder 9, 12.5, 12.6</li>
-        <li>Microsoft SQL SERVER</li>
-        <li>MySQL</li>
-        <li>Wordpress</li>
-        <li>Joomla</li>
-        <li>Crystal Reports</li>
-        <li>Python (Just one project)</li>
-      </ul>
-    </section>
+        <section class="experience" id="experience">
+          <h2>Experience</h2>
+          <ul>
+            <li>PowerBuilder 9, 12.5, 12.6</li>
+            <li>Microsoft SQL SERVER</li>
+            <li>MySQL</li>
+            <li>Wordpress</li>
+            <li>Joomla</li>
+            <li>Crystal Reports</li>
+            <li>Python (Just one project)</li>
+          </ul>
+        </section>
 
-    <section id="connect">
-      <h2>Connect</h2>
-      <ul>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/mauricio-moralesvalen"
-            target="_blank"
-            >My LinkedIn</a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/moralesvalen" target="_blank"
-            >My GitHub</a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/morales_valen" target="_blank"
-            >My Instagram</a
-          >
-        </li>
-      </ul>
-    </section>
+        <section class="connect" id="connect">
+          <h2>Connect</h2>
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/mauricio-moralesvalen"
+                target="_blank"
+                ><img src="images/linkedin.png" alt="My LinkedIn"  title="My LinkedIn"
+                /></a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/moralesvalen" target="_blank"
+                > <img src="images/github.png" alt="My GitHub"  title="My GitHub"
+                /></a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/morales_valen" target="_blank"> <img src="images/ig.webp" alt="my instagram"  title="my instagram"
+                /></a>
+               </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <footer>
+      Code the Dream &copysr; Jose Mauricio Morales | Kepler Student's
+    </footer>
   </body>
 </html>
