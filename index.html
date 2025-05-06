@@ -6,29 +6,32 @@
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
-  <!--CABECERA DE LA PAGINA-->
-  <header>
-    <div class="logotipo">
-      <!--Logo -->
-      <img src="images/logo7.png" alt="mauricio morales logo" title="logo"/>
-      <h1>Mauricio Morales</h1>
-    </div>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#connect">Connect</a></li>
-    </ul>
-  </nav>
-  <div class="barra">
-    <span class="esquina-izquierda"></span>
-    <span class="relleno-barra"></span>
-    <span class="esquina-derecha"></span>
-  </div>
+ 
 
   <body>
+     <!--CABECERA DE LA PAGINA-->
+     <header>
+      <div class="logotipo">
+        <img src="images/logo7.png" alt="mauricio morales logo" title="logo"/>
+        <h1>Mauricio Morales</h1>
+      </div>
+    </header>
+    <!--MENU DE LA PAGINA-->
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#connect">Connect</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+
+    <div class="barra">
+      <span class="esquina-izquierda"></span>
+      <span class="relleno-barra"></span>
+      <span class="esquina-derecha"></span>
+    </div>
     <div id="content">
       <div class="box">
         <h1>Jose Mauricio Morales Valencia</h1>
@@ -60,15 +63,30 @@
 
         <section class="experience" id="experience">
           <h2>Experience</h2>
-          <ul>
-            <li>PowerBuilder 9, 12.5, 12.6</li>
-            <li>Microsoft SQL SERVER</li>
-            <li>MySQL</li>
-            <li>Wordpress</li>
-            <li>Joomla</li>
-            <li>Crystal Reports</li>
-            <li>Python (Just one project)</li>
-          </ul>
+          <div class="columns">
+           
+            <div class="column">
+               <h3>Sybase & SQL Server DBA | 2006–2010</h3>
+                <p>Performed database maintenance, implemented database replication (SMTP Sybase and SQL Server), conducted data modeling, developed SQL reports, and optimized complex queries.</p>
+            </div>
+                   
+           <div class="column">
+            <h3>Web Administrator | Joomla & WordPress | 2009–2014
+            </h3>
+             <p>Government website maintenance, backups, plugin and module implementations, and standards optimization.</p>
+         </div>
+         <div class="column">
+          <h3>PowerBuilder Developer | 2009-2014
+          </h3>
+           <p>Client-server transactional app development for both government and private sector processes: inventory, invoicing, accounting, taxes, etc.</p>
+       </div>
+       <div class="column">
+        <h3>Operations Manager | 2014–2022
+        </h3>
+         <p>Operations Manager for a government institution of veterans: benefits, pensions, health, education, and housing.</p>
+     </div>
+        </div>   
+        
         </section>
 
         <section class="connect" id="connect">
@@ -95,8 +113,15 @@
             </li>
           </ul>
         </section>
+        <section id="skills"><h2>Skills</h2></section>
+        <section id="projects">
+                    <h2>Projects</h2>
+                  <ul></ul>
+                  </section>
       </div>
     </div>
+  </div>
+</div>    
     <footer>
       Code the Dream &copysr; Jose Mauricio Morales | Kepler Student's
     </footer>

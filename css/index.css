@@ -7,6 +7,19 @@
   text-decoration: none;
 }
 
+header,
+nav,
+.barra,
+footer {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+header,
+nav {
+  left: 50%;
+  transform: translateX(-50%);
+}
 h1 {
   font-size: 36px;
   font-weight: 700;
@@ -17,7 +30,10 @@ h2 {
   font-size: 25px;
   font-weight: 700;
 }
-
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
 p {
   padding-top: 20px;
   font-weight: 400;
@@ -29,10 +45,14 @@ body {
 
 header {
   /*estilo de cabecara*/
-  width: 1212px;
+  width: 1250px;
   height: 140px;
   background-color: #23282b;
-  margin: 0px auto;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
 }
 
 .logotipo {
@@ -43,7 +63,6 @@ header {
   font-weight: lighter;
   color: #42a096;
   margin-left: 30%;
-  /* text-transform: uppercase;*/
   padding-top: 10px;
 }
 
@@ -71,12 +90,15 @@ img.foto {
 nav {
   width: 1250px;
   height: 40px;
-  margin: 0 auto;
   background-color: #1b1e1f;
   border: 1px solid #333333;
-  box-shadow: 0px 22px 22px gray;
+  box-shadow: 0px 20px 21px -rgb(71, 67, 67);
   font-size: 15px;
-  margin-bottom: 0;
+  position: fixed;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9998;
 }
 
 nav ul {
@@ -96,11 +118,23 @@ nav ul li a {
   color: rgb(209, 207, 207);
 }
 
-.barra {
-  position: relative;
+header,
+nav {
   width: 1250px;
   margin: 0 auto;
+}
+
+.barra {
+  position: relative;
+  width: 1254px;
+  margin: 0 auto;
+  margin-top: 180px; /* espacio exacto para que quede debajo del header + nav */
   margin-bottom: 20px;
+  /**/
+  position: sticky;
+  top: 180px;
+  z-index: 998;
+  height: 10px;
 }
 
 .esquina-izquierda {
@@ -143,6 +177,7 @@ nav ul li a:hover {
   margin: 0 auto;
   margin-bottom: 30px;
   margin-top: 30px;
+  margin-top: 15px;
 }
 
 .box {
@@ -158,6 +193,7 @@ nav ul li a:hover {
 .about {
   margin: 20px;
   padding-left: 15px;
+  width: 450px;
 }
 
 .experience {
@@ -198,11 +234,44 @@ footer {
   box-shadow: 0px 0px 20px gray;
   margin: 0 auto;
 }
-
 .experience {
-  background-color: #f0f0f0;
+  background-color: #bee4d0;
+  /*background-color: #f2f2f2;*/
   padding: 25px;
   margin-bottom: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.column {
+  background-color: #23282b;
+  color: white;
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5%;
+  padding-top: 25px;
+  font-size: 15px;
+}
+
+.column:hover {
+  /*background: #1dcd9f;*/
+  background-color: #758c9a;
+  color: white;
+  transition: background-color 0.9s ease;
+  transform: scale(1.05);
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
 }
