@@ -178,34 +178,6 @@ nav ul li a:hover {
   padding-left: 0.9375rem;
 }
 
-/*
-.connect {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.25rem;
-  padding: 0.25rem;
-  border: solid red;
-}
-
-.connect img {
-  width: 3.5rem;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  border: solid yellow;
-}
-
-.item {
-  font-size: 0.75rem;
-  text-align: center;
-  padding: 0.2rem 0;
-  height: auto;
-  border: solid blueviolet;
-}
-
-*/
-
 .connect {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -222,16 +194,6 @@ nav ul li a:hover {
   justify-content: center;
 }
 
-.connect .item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-
-  padding: 0.1rem;
-  margin: 0;
-}
-
 .connect .item a {
   display: block;
 }
@@ -242,23 +204,64 @@ nav ul li a:hover {
   object-fit: cover;
   display: block;
   margin: 0 auto;
+  transition: transform 0.4s ease;
 }
 
 .item p {
   font-size: 0.7rem;
   padding-top: 0.1rem;
   margin-bottom: 0;
+  transition: transform 0.4s ease;
 }
 
+.connect img:hover {
+  transform: rotate(20deg) scale(1.15);
+}
+
+/**cambios para tarea ***/
 footer {
   background-color: #1b1e1f;
   border: 1px solid #333333;
   color: #d1d4d6;
   text-align: center;
-  padding: 1.25rem 0;
+  padding: 0.5rem 0;
   box-shadow: 0 0 1.25rem gray;
+  font-size: 2rem;
 }
 
+footer,
+p {
+  padding: 0.5rem;
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.skillsItem {
+  background: #273f4f;
+  padding: 0.625rem 0.75rem;
+  text-align: center;
+  color: #efeeea;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  list-style: none;
+}
+
+.skillsItem:hover {
+  background: #fe7743;
+  color: white;
+  transition: background-color 0.9s ease;
+  transform: scale(1.05);
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+
+/***  
+ fin de cambios **/
 .experience {
   background-color: #bee4d0;
   padding: 1.5625rem;
@@ -318,7 +321,10 @@ footer {
     font-size: 0.9375rem;
     height: 16rem;
   }
-
+  #skills {
+    padding: 1.5625rem;
+    font-size: 1rem;
+  }
   #content {
     width: 75.625rem;
   }
@@ -345,6 +351,20 @@ footer {
   }
   nav {
     font-size: 0.9375rem;
+  }
+  .skillsItem {
+    font-size: 1rem;
+    width: 30rem;
+    align-items: center;
+  }
+
+  #skills {
+    width: 65rem;
+    margin: 0 auto;
+  }
+
+  footer {
+    font-size: 1rem;
   }
 }
 
@@ -375,7 +395,10 @@ footer {
   .about {
     font-size: 2.5rem;
   }
-
+  #skills {
+    padding: 1.5625rem;
+    font-size: 2rem;
+  }
   header,
   nav,
   .barra,
@@ -392,5 +415,16 @@ footer {
   footer {
     text-align: center;
     padding: 1rem 0;
+  }
+
+  .skillsItem {
+    font-size: 1.8rem;
+    width: 20rem;
+    align-items: center;
+  }
+
+  #skills {
+    width: 45rem;
+    margin: 0 auto;
   }
 }
