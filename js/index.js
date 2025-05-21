@@ -108,3 +108,61 @@ messageForm.addEventListener("submit", (event) => {
     li.style.display = "block";
   }
 });
+
+/* Adding project since GitHub */
+
+const urlProject = "https://api.github.com/users/moralesvalen/repos";
+
+async function fetchGitHub() {
+  try {
+    const response = await fetch(urlProject);
+
+    if (!response.ok) {
+      throw new Error("Request failed");
+    }
+
+    const data = await response.json();
+    const projectSection = document.querySelector("#projects");
+    data.forEach((repo) => {
+      const nombre = repo.name;
+      const id = repo.id;
+      const description = repo.description || "No description provided";
+      const urlHtml = repo.html_url;
+
+      const li = document.createElement("li");
+      li.className = "projectItem";
+
+      const link = document.createElement("a");
+      link.href = urlHtml;
+      link.textContent = "View on GitHub";
+      link.className = "githubButton";
+      link.target = "_blank";
+
+      li.innerHTML = `<div class ="headerGit"><h3>${nombre}</h3></div>
+        <p><strong>ID:</strong> ${id}</p>
+        <p><strong>Description:</strong> ${description}</p>
+        <p><div class="actionsGit"><strong></strong></p></div> `;
+
+      const linkParagraph = li.querySelector("p:last-child");
+      linkParagraph.appendChild(link);
+
+      projectSection.appendChild(li);
+
+      console.log(
+        ` ID: ${id}, Repositore Name: ${nombre}, Description: ${description}, Link: ${urlHtml} `
+      );
+    });
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+}
+
+fetchGitHub();
+
+/*Hamburguer menu */
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
